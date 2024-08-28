@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>NANOFONT</title>
+    <style>
+        @font-face {
+            font-family: 'IqooHei';
+            src: url("./font/iqohei.ttf");
+        }
+        .title{
+            font-family: 'IqooHei';            
+        }
+        .menu{
+            font-family: 'IqooHei';
+        }
+        #menubar_agree{
+            color: cadetblue;
+        }
+        #menubar_stop{
+            color: darkred;
+        }
+
+
+        ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(58, 58, 58);
+}
+ 
+li {
+    float: left;
+}
+ 
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: large;
+}
+ 
+/*鼠标移动到选项上修改背景颜色 */
+li a:hover {
+    background-color:rgb(73, 73, 73) ;
+}
+
+.title a:hover{
+    color: #999;
+}
+.title a{
+    text-decoration: none;
+    color: black;
+    font-size: 48px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="format">
+        <div class="title">
+            <a align="left">NANOFONT</a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="" id="menubar_agree">Home</a></li>
+                <li><a href="./content/index.html" id="menubar_agree">Content</a></li>
+                <!-- <li><a href="./about" id="menubar_agree">About</a></li> -->
+            </ul>
+        </div>
+    </div>
+</body>
