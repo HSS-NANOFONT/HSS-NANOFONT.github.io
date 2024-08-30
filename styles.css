@@ -1,0 +1,75 @@
+@import url("./font/result.css");
+.title, .menu, .text, .last{
+    font-family: 'IqooHei';            
+}
+.text{
+    font-size: 24px;
+}
+.text:hover{
+    color: #4d4d4d;
+}
+#menubar_agree{
+    color: cadetblue;
+}
+#menubar_stop{
+    color: darkred;
+}
+#menubar_exit{
+    color: rgb(153, 21, 21);
+}
+#menubar_important{
+    color: rgb(44, 95, 235);
+}
+* {
+    scroll-behavior: smooth;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(58, 58, 58);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: large;
+}
+
+/*鼠标移动到选项上修改背景颜色 */
+li a:hover {
+    background-color:rgb(73, 73, 73) ;
+}
+
+.title a:hover{
+    color: #999;
+}
+.title a,.text a{
+    text-decoration: none;
+    color: black;
+    font-size: 48px;
+}
+
+.text a{
+    color:rgb(29, 119, 89);
+    font-style: italic;
+}
+.text a:hover{
+    color:rgb(57, 172, 133);
+}
+.last{
+    color:rgb(57, 97, 172);
+}
+.last:hover{
+    color:rgb(92, 126, 189);
+}
