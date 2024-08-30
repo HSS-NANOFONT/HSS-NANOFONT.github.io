@@ -1,0 +1,154 @@
+tr
+	{mso-height-source:auto;
+	mso-ruby-visibility:none;}
+col
+	{mso-width-source:auto;
+	mso-ruby-visibility:none;}
+br
+	{mso-data-placement:same-cell;}
+ruby
+	{ruby-align:left;}
+.style29
+	{background:#FFC7CE;
+	mso-pattern:black none;
+	color:#9C0006;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:等线;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-style-name:差;
+	mso-style-id:27;}
+.style0
+	{mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	white-space:nowrap;
+	mso-rotate:0;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:等线;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	border:none;
+	mso-protection:locked visible;
+	mso-style-name:常规;
+	mso-style-id:0;}
+.style28
+	{background:#C6EFCE;
+	mso-pattern:black none;
+	color:#006100;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:等线;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-style-name:好;
+	mso-style-id:26;}
+.style33
+	{background:#F2F2F2;
+	mso-pattern:black none;
+	color:#FA7D00;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:等线;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	border:.5pt solid #7F7F7F;
+	mso-style-name:计算;
+	mso-style-id:22;}
+.style35
+	{background:#A5A5A5;
+	mso-pattern:black none;
+	color:white;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:等线;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	border:2.0pt double #3F3F3F;
+	mso-style-name:检查单元格;
+	mso-style-id:23;}
+.style30
+	{background:#FFEB9C;
+	mso-pattern:black none;
+	color:#9C5700;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:等线;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-style-name:适中;
+	mso-style-id:28;}
+td
+	{mso-style-parent:style0;
+	padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:等线;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:bottom;
+	border:none;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	mso-protection:locked visible;
+	white-space:nowrap;
+	mso-rotate:0;}
+.xl65
+	{mso-style-parent:style0;
+	font-size:12.0pt;}
+.xl66
+	{mso-style-parent:style0;}
+.xl67
+	{mso-style-parent:style29;
+	color:#9C0006;
+	background:#FFC7CE;
+	mso-pattern:black none;}
+.xl68
+	{mso-style-parent:style28;
+	color:#006100;
+	background:#C6EFCE;
+	mso-pattern:black none;}
+.xl69
+	{mso-style-parent:style35;
+	color:white;
+	font-weight:700;
+	border:2.0pt double #3F3F3F;
+	background:#A5A5A5;
+	mso-pattern:black none;}
+.xl70
+	{mso-style-parent:style30;
+	color:#9C5700;
+	background:#FFEB9C;
+	mso-pattern:black none;}
+.xl71
+	{mso-style-parent:style33;
+	color:#FA7D00;
+	font-weight:700;
+	border:.5pt solid #7F7F7F;
+	background:#F2F2F2;
+	mso-pattern:black none;}
