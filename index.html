@@ -1,9 +1,146 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="refresh" content="2;url=https://nf.fmdns.cn/index_zhCN.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANOFONT - 納米字库</title>
+    <style>
+        @import url("https://fontsapi.zeoseven.com/467/main/result.css");
+        @import url("https://fontsapi.zeoseven.com/467/b/result.css");
+        @import url("https://fontsapi.zeoseven.com/467/c/result.css");
+        @import url("https://fontsapi.zeoseven.com/467/d/result.css");
+
+        @keyframes apparition {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+      
+        body {
+            margin: 0;
+            font-size: 20px;
+            font-family: NanoOldSong-A,NanoOldSong-B,NanoOldSong-C,NanoOldSong-D;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: black;
+            color: white;
+            font-family: NanoOldSong-A,NanoOldSong-B,NanoOldSong-C,NanoOldSong-D;
+            overflow: hidden;
+        }
+        .content {
+            position: relative;
+            width: 600px;
+            max-width: 100%;
+            margin: 20px;
+            background: black;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: -10px 10px 67px -12px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: apparition 0.8s 1.2s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
+        }
+
+        .content p {
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.1rem;
+            color: #FFFFFF;
+        }
+
+        .content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .content button {
+            display: inline-block;
+            margin-top: 0.2rem;
+            padding: 0.5rem 1rem;
+            border: 3px solid #FFFFFF;
+            background: transparent;
+            font-size: 1rem;
+            color: #FFFFFF;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: NanoOldSong-A,NanoOldSong-B,NanoOldSong-C,NanoOldSong-D;
+            font-weight: bold;
+        }
+        .content button:hover{
+            background-color: rgb(49, 49, 49);
+        }
+        #impo {
+            display: inline-block;
+            margin-top: 0.2rem;
+            padding: 0.5rem 1rem;
+            border: 3px solid #39ff9c;
+            background: transparent;
+            font-size: 1rem;
+            color: #39ff9c;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: NanoOldSong-A,NanoOldSong-B,NanoOldSong-C,NanoOldSong-D;
+            font-weight: bold;
+        }
+        #impo_g {
+            display: inline-block;
+            margin-top: 0.2rem;
+            padding: 0.5rem 1rem;
+            border: 3px solid #e0ac1c;
+            background: transparent;
+            font-size: 1rem;
+            color: #FFFFFF;
+            text-decoration: none;
+            cursor: pointer;
+            font-family: NanoOldSong-A,NanoOldSong-B,NanoOldSong-C,NanoOldSong-D;
+            font-weight: bold;
+        }
+        #impo:hover{
+            background-color: #3c5f4e;
+        }
+
+        #impo_g:hover{
+            background-color: #5e5a52;
+        }
+    </style>
 </head>
 <body>
-  <p>即将跳转，请稍后....</p>
+  <main class='container'>
+    <article class='content'>
+      <h1 style="color: rgb(255, 117, 117);">NANOFONT - 納米字库</h1>
+      <p>
+        纳米检字：
+        <button onclick="window.open('./index_zhCN.html')">简体中文</button>
+        <button onclick="window.open('./index_zhTW.html')">繁體中文</button>
+        <button onclick="window.open('./index_enUS.html')">English</button>
+        <button onclick="window.open('./index_jp.html')">日本語</button>
+        <button onclick="window.open('./index_kr.html')">한국어</button>
+        <button onclick="window.open('./index_krCS.html')">韓國말（Test）</button>
+      </p>
+      <p>
+        工具：
+        <button onclick="window.open('./tl/kg.html')">KageZi</button>
+      </p>
+      <p>
+        关于及帮助：
+        <button id="impo" onclick="window.open('./ab/index.html')">About</button>
+        <button onclick="window.open('./ab/font.html')">FontsInstallTutorial</button>
+        <button id="impo_g" onclick="window.open('./ab/tip.html')">GiveTips</button>
+      </p>
 </body>
 </html>

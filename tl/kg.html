@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kage Zi</title>
+
+    <style>
+        #protectedImg {
+            pointer-events: none;
+            user-select: none;
+        }
+    </style>
+
+</head>
+<body>
+    <img id="targetImage" src="nbase.jpg" alt="image_zi">
+    <br>
+    <input type="text" id="userInput" placeholder="Type IDS...">
+    <button onclick="changeImage()">生成</button>
+    <br><br>
+    本工具生成的图片依赖<b>字统API</b>，<u>禁止滥用或使用于非法用途之中</u>！！
+    <script>
+        function changeImage() {
+            const input = document.getElementById('userInput').value;
+            
+            document.getElementById('targetImage').src = `http://zu.zi.tools/${input}.svg`;
+        }
+    </script>
+</body>
+</html>

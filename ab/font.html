@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>关于字体的问题及教学</title>
+<style>
+    summary{
+        font-size: 1.2rem;
+        color: #cf4141;
+    }
+    details{
+        font-size: 1rem;
+        color: #000000;
+    }
+    code{
+        background-color: #cacaca;
+        border-radius: 10px;
+    }
+</style>
+</head>
+<body>
+<h1>关于字体的问题及教学</h1>
+<p>注：这些文章内容里面所提及的字体名称都为<strong>“纳米老宋”</strong>
+<br>- 若需要体验“纳米老宋”字体，请先下载“纳米老宋”字体文件后再进行操作！<span><button onclick="window.open('https:\/\/github.com/Hansha2011/NanoOldSong')">点击前往字体主页面</button></span>
+<br>- 若需要使用其他字体来作为自己的字体，请务必准备好字体文件，并把下文提到的字体文件名改成您准备的字体的文件名称！
+</p>
+<br>
+
+<details>
+    <summary>如何安装字体到Android 5.0以上系统的手机上</summary>
+    1. 请先将您的手机获取<strong>ROOT权限</strong><br>
+    2. 安装文件管理器软件（例如 <i>“MT管理器”</i>）<br>
+    3. 打开软件，将所需添加的字体复制入 /system/fonts/ 目录下，并将文件权限设定成 rw-r--r-- (所有者=读写，用户组=读，其他=读)<br>
+    4. 修改 /system/etc/fallback_fonts.xml 文件，在<br><code>all others.<br>--&gt;<br>&lt;familyset&gt;</code><br>代码片的后面<b>添加新增字体的信息</b>：
+    <br>
+    <code style="white-space: pre;">
+&lt;family&gt;<br>
+	&lt;fileset&gt;<br>
+		&lt;file&gt;NanoOldSongA-Regular.ttf&lt;/file&gt;<br>
+	&lt;/fileset&gt;<br>
+&lt;/family&gt;<br>
+&lt;family&gt;<br>
+	&lt;fileset&gt;<br>
+		&lt;file&gt;NanoOldSongB-Regular.ttf&lt;/file&gt;<br>
+	&lt;/fileset&gt;<br>
+&lt;/family&gt;<br>
+&lt;family&gt;<br>
+	&lt;fileset&gt;<br>
+		&lt;file&gt;NanoOldSongC-Regular.ttf&lt;/file&gt;<br>
+	&lt;/fileset&gt;<br>
+&lt;/family&gt;</code><br>
+
+<br>您也可以这样子做：<br>
+
+<code style="white-space: pre;">
+    &lt;family&gt;<br>
+        &lt;fileset&gt;<br>
+            &lt;file lang="zh-Hans"&gt;NanoOldSongA-Regular.ttf&lt;/file&gt;<br>
+        &lt;/fileset&gt;<br>
+    &lt;/family&gt;<br>
+    &lt;family&gt;<br>
+        &lt;fileset&gt;<br>
+            &lt;file lang="zh-Hans"&gt;NanoOldSongB-Regular.ttf&lt;/file&gt;<br>
+        &lt;/fileset&gt;<br>
+    &lt;/family&gt;<br>
+    &lt;family&gt;<br>
+        &lt;fileset&gt;<br>
+            &lt;file lang="zh-Hans"&gt;NanoOldSongC-Regular.ttf&lt;/file&gt;<br>
+        &lt;/fileset&gt;<br>
+    &lt;/family&gt;</code><br>
+    <br>
+- 这里<code>&lt;file&gt;</code><code>&lt;/file&gt;</code>元素需要填您想显示的字体文件，在<code>&lt;fileset&gt;</code><code>&lt;/fileset&gt;</code>元素内可以填多个<code>&lt;file&gt;</code><code>&lt;/file&gt;</code>元素<br>
+- <code>&lt;file&gt;</code><code>&lt;/file&gt;</code>元素中的<code>lang</code>选项代指字体族在特定的地区范围中允许显示的属性，可将该选项添加至<code>&lt;file&gt;</code>与<code>&lt;family&gt;</code>元素中，记住选项后面必须加入您想要的地区范围，例如：<code>zh-Hans</code>（简体中文） 【注：选项<b>选填</b>不是<b>必填</b>！！请根据使用需要！！】
+<br><br>
+5. 修改 /system/etc/fonts.xml 文件，在<br><code>&lt;!-- fallback fonts --&gt;</code><br>代码片的后面<b>添加新增字体的信息</b>：
+<code style="white-space: pre;">
+    &lt;family lang="zh-Hans"&gt;<br>
+            &lt;font weight="400" style="normal"&gt;NanoOldSongA-Regular.ttf&lt;/font&gt;<br>
+    &lt;/family&gt;<br>
+    &lt;family lang="zh-Hans"&gt;<br>
+            &lt;font weight="400" style="normal"&gt;NanoOldSongB-Regular.ttf&lt;/font&gt;<br>
+    &lt;/family&gt;<br>
+    &lt;family lang="zh-Hans"&gt;<br>
+            &lt;font weight="400" style="normal"&gt;NanoOldSongC-Regular.ttf&lt;/font&gt;<br>
+    &lt;/family&gt;</code><br>
+    <br>
+    - 这里<code>&lt;font&gt;</code><code>&lt;/font&gt;</code>元素需要填您想显示的字体文件，可填入多个<br>
+    - <code>&lt;font&gt;</code><code>&lt;/font&gt;</code>元素中的<code>weight</code>选项代指字体显示自重，根据字体代表的字重填入 【注：选项<b>选填</b>不是<b>必填</b>！！请根据使用需要！！】
+<br>- <code>&lt;font&gt;</code><code>&lt;/font&gt;</code>元素中的<code>style</code>选项代指字体类型，根据字体代表的类型填入（normal & italic） 【注：选项<b>选填</b>不是<b>必填</b>！！请根据使用需要！！】<br><br>
+6. 重启手机即可使用
+
+注： 小米的 MIUI 系统字体路径为 <code>/sdcard/MIUI/theme/.data/content/fonts/</code>
+</details>
+
+<br>
+
+<details>
+    <summary>如何安装字体到Windows系统里</summary>
+    1. 打开字体预览页面<br>
+    2. 点击“安装”
+</details>
+
+<br>
+
+<details>
+    <summary>如何从Windows10以上的系统里删除字体</summary>
+    1. 打开字体设置页面<br>
+    2. 点击您想删除的字体<br>
+    3. 点击“卸载”
+</details>
+
+<br>
+
+<details>
+    <summary>如何从Windows10以下的系统里删除字体</summary>
+    1. 打开“控制面板”<br>
+    2. 打开“外观和个性化 > 字体”<br>
+    3. 点击您想删除的字体<br>
+    4. 点击“删除”
+</details>
+
+<br>
+
+<details>
+    <summary>为什么总字符数超过65535个字形的字体不能合在一起而是得分开</summary>
+    因为一个字体所能容纳的字形数量有限（上限65535个）
+</details>
+
+<br>
+
+</body>
+</html>
