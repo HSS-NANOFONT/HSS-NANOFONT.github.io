@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>NANOFONT - NanoDyongWongSong</title>
+    <link rel="stylesheet" href="fonts/result.css">
+    <style>
+        body {
+            background: #f9f9f9;
+            padding: 40px;
+            font-size: 18px;
+            color: #222;
+            transition: background 0.6s;
+            font-family: 'NanoDyongWongSong'
+        }
+        .font-sample {
+            margin-bottom: 32px;
+            padding: 24px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .font-name {
+            font-size: 1.2em;
+            margin-bottom: 12px;
+            color: #555;
+        }
+        .sample-text {
+            font-size: 2em;
+        }
+        #fontIntro {
+            background:#222; 
+            color:#fff; 
+            border-radius:8px; 
+            padding:24px; 
+            margin-bottom:24px; 
+            transition: background 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <h1>字體展示頁面</h1>
+    <div style="margin-bottom: 24px;">
+        <label for="userText">輸入文字：</label>
+        <input type="text" id="userText" value="這是 NanoDyongWongSong 的字體效果。 The quick brown fox jumps over the lazy dog." style="width: 60%; padding: 6px;">
+    </div>
+    <div style="margin-bottom: 24px;">
+        <label for="fontSize">字體大小：</label>
+        <input type="range" id="fontSize" min="16" max="96" value="32" style="vertical-align: middle;">
+        <span id="fontSizeValue">32px</span>
+    </div>
+    <div style="margin-bottom: 24px;">
+        <label for="fontWeight">字重：</label>
+        <input type="range" id="fontWeight" min="100" max="900" step="100" value="400" style="vertical-align: middle;">
+        <span id="fontWeightValue">400</span>
+    </div>
+    <div class="font-sample" style="font-family: 'NanoDyongWongSong', sans-serif;">
+        <div class="font-name">NanoDyongWongSong</div>
+        <div class="sample-text" id="sampleText" style="font-size:32px; font-weight:400;"></div>
+        </div>
+    </div>
+    <div style="margin-bottom: 24px;"></div>
+    <div id="fontIntro">
+        <h2 style="margin-top:0;">字體介紹</h2>
+        <p style="font-size: 24px;">
+            NanoDyongWongSong 是一款圖元字體，是基於<b>NanoDyongChyangSong</b>字體的衍生補充作<br>
+        此字體是提取於由臺灣倚天資訊公司開發的一款繁體中文操作系統：<b>倚天中文系統</b>（<i>ET3</i>）<br>
+        此字體完全支援繁體中文與部分簡體中文字元，具有清晰的像素風格和良好的可讀性<br>
+        該字體適用於各種場景，包括網頁設計、應用程式介面以及印刷材料等
+        </p><br>
+        <h2 style="margin-top:0;">字體授權</h2>
+        <p style="font-size: 24px;">
+            OFL
+        </p><br>
+        <h2 style="margin-top:0;">NF字體支持標準</h2>
+        <p style="font-size: 24px;">
+            F<br>
+        </p>
+    </div>
+    <script>
+        const userText = document.getElementById('userText');
+        const fontSize = document.getElementById('fontSize');
+        const fontWeight = document.getElementById('fontWeight');
+        const sampleText = document.getElementById('sampleText');
+        const fontSizeValue = document.getElementById('fontSizeValue');
+        const fontWeightValue = document.getElementById('fontWeightValue');
+
+        userText.addEventListener('input', () => {
+            sampleText.textContent = userText.value;
+        });
+
+        fontSize.addEventListener('input', () => {
+            sampleText.style.fontSize = fontSize.value + 'px';
+            fontSizeValue.textContent = fontSize.value + 'px';
+        });
+
+        fontWeight.addEventListener('input', () => {
+            sampleText.style.fontWeight = fontWeight.value;
+            fontWeightValue.textContent = fontWeight.value;
+        });
+
+        // 初始化
+        sampleText.textContent = userText.value;
+        sampleText.style.fontSize = fontSize.value + 'px';
+        sampleText.style.fontWeight = fontWeight.value;
+    </script>
+</body>
+<footer>
+    <p> 版權歸<b>NANOFONT</b>所有 &copy; 2025
+</footer>
+</html>

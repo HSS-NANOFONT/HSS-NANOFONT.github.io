@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>NANOFONT - 字体导航</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f7971e, #ffd200);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            margin: 0;
+        }
+        footer {
+            display:flex;
+            justify-content:center;
+            align-items: end;
+            height: 95vh;
+        }
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        .btn-group {
+            display: flex;
+            gap: 30px;
+        }
+        button {
+            padding: 20px 40px;
+            font-size: 1rem;
+            color: #fff;
+            background: linear-gradient(90deg, #43cea2, #185a9d);
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.5s;
+            outline: none;
+        }
+        button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 16px 40px 0 rgba(31, 38, 135, 0.37);
+            background: linear-gradient(90deg, #185a9d, #43cea2);
+        }
+        .fade-out {
+            animation: fadeOut 0.8s forwards;
+        }
+        @keyframes fadeOut {
+            to { opacity: 0; transform: scale(0.95);}
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-group" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <button class="nextBtn" data-href="nfws/index.html">NanoDyongWongSong</button>
+    </div>
+   <!--
+    <div class="btn-group" style="align-items: end; height: 95vh;">
+        <button class="nextBtndd" data-href="shower.html">Font Shower</button>
+    </div>
+    <p style="display:flex; justify-content:center; align-items:end; height: 90vh;">版权归<b>NANOFONT</b>所有 &copy; 2025</p>
+    <script>-->
+
+        document.querySelectorAll('.nextBtn').forEach(function(btn) {
+            btn.onclick = function() {
+                document.body.classList.add('fade-out');
+                var url = btn.getAttribute('data-href');
+                setTimeout(function() {
+                    window.location.href = url;
+                }, 800);
+            };
+        }); 
+        
+        document.querySelectorAll('.nextBtndd').forEach(function(btn) {
+            btn.onclick = function() {
+                document.body.classList.add('fade-out');
+                var url = btn.getAttribute('data-href');
+                setTimeout(function() {
+                    window.location.href = url;
+                }, 800);
+            };
+        });
+        </script>
+</body>
+</html>
